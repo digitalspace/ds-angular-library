@@ -1,0 +1,40 @@
+.progresses {
+    display: flex;
+    align-items: center;
+}
+
+.line-completed {
+    width: 120px;
+    height: 6px;
+    background: blue;
+}
+
+.steps-completed {
+    display: flex;
+    background-color: blue;
+    color: #fff;
+    font-size: 14px;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.line-incomplete {
+    width: 120px;
+    height: 6px;
+    background: grey;
+}
+
+.steps-incomplete {
+    display: flex;
+    background-color: grey;
+    color: #fff;
+    font-size: 14px;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
