@@ -1,24 +1,46 @@
 # StepProgressBar
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
+To create a step progress bar, insert the following into your markup:
 
-## Code scaffolding
+```
+<ds-step-progress-bar [activeStepIndex]="1" [steps]="steps"></ds-step-progress-bar>
+```
 
-Run `ng generate component component-name --project step-progress-bar` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project step-progress-bar`.
-> Note: Don't forget to add `--project step-progress-bar` or else it will be added to the default project in your `angular.json` file. 
+**activeStepIndex** dictates up to which step will be "active". To have no steps active set **activeStepIndex** to -1.
 
-## Build
+**Step is a maditory input. This will include the step information. It should be formatted like the following:
 
-Run `ng build step-progress-bar` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+  steps = [
+    {
+      stepText: '1',
+      stepSubText: 'Step 1'
+    },
+    {
+      stepText: '2',
+      stepSubText: 'Step 2'
+    },
+    {
+      stepText: 3',
+      stepSubText: 'Step 3'
+    },
+    {
+      stepText: 4',
+      stepSubText: 'Step 4'
+    }
+  ];
+```
 
-## Publishing
+You can also leave both **stepText** and **stepSubText** as empty string.
 
-After building your library with `ng build step-progress-bar`, go to the dist folder `cd dist/step-progress-bar` and run `npm publish`.
+You are able to customize colours by using the following inputs:
 
-## Running unit tests
-
-Run `ng test step-progress-bar` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+<ds-step-progress-bar [activeStepIndex]="1"
+  [progressBarColour]="'grey'"
+  [progressBarActiveColour]="'blue'"
+  [subTextColour]="'grey'"
+  [subTextActiveColour]="'blue'"
+  [stepTextColour]="'white'"
+  [steps]="steps"></ds-step-progress-bar>
+```

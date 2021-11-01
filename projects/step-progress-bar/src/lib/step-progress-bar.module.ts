@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { StepProgressBarComponent } from './step-progress-bar.component';
 
 
@@ -8,6 +9,7 @@ import { StepProgressBarComponent } from './step-progress-bar.component';
     StepProgressBarComponent
   ],
   imports: [
+    BrowserModule
   ],
   exports: [
     StepProgressBarComponent
