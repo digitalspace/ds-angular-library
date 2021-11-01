@@ -33,30 +33,6 @@ $step-text-color: var(--step-text-color);
     font-weight: 400;
 }
 
-// .step:before {
-//     content: '';
-// }
-
-// #progressbar #step0:before {
-//     content: "1";
-// }
-
-// #progressbar #step1:before {
-//     content: "2";
-// }
-
-// #progressbar #step2:before {
-//     content: "3";
-// }
-
-// #progressbar #step3:before {
-//     content: "4";
-// }
-
-// #progressbar #step4:before {
-//     content: "5";
-// }
-
 #progressbar li:before {
     width: 50px;
     height: 50px;
