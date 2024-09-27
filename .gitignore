@@ -8,6 +8,7 @@
 
 # Node
 /node_modules
+/projects/ds-angular-library/node_modules
 npm-debug.log
 yarn-error.log
 
