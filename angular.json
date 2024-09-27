@@ -3,23 +3,23 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "step-progress-bar": {
+    "ds-angular-library": {
       "projectType": "library",
-      "root": "projects/step-progress-bar",
-      "sourceRoot": "projects/step-progress-bar/src",
-      "prefix": "ds",
+      "root": "projects/ds-angular-library",
+      "sourceRoot": "projects/ds-angular-library/src",
+      "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/step-progress-bar/ng-package.json"
+            "project": "projects/ds-angular-library/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/step-progress-bar/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ds-angular-library/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/step-progress-bar/tsconfig.lib.json"
+              "tsConfig": "projects/ds-angular-library/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,13 +27,14 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/step-progress-bar/src/test.ts",
-            "tsConfig": "projects/step-progress-bar/tsconfig.spec.json",
-            "karmaConfig": "projects/step-progress-bar/karma.conf.js"
+            "tsConfig": "projects/ds-angular-library/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
           }
         }
       }
     }
-  },
-  "defaultProject": "step-progress-bar"
+  }
 }
